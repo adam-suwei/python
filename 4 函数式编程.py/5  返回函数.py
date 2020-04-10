@@ -65,4 +65,8 @@ id(z)
 # 38383328
 
 # 如果要1 4 9就要函数使用时的输入时固定的
-def  exe()
+def  exe():
+    for i in range(10,20):
+        def f(i):
+            return i
+        
