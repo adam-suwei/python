@@ -43,6 +43,8 @@ f()  #即在log()函数中返回的wrapper()函数
 
 list(range(12))
 
+print(11)
+
 
 
 
