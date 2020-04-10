@@ -1,0 +1,5 @@
+shift+enter   执行选中vscode代码 elif无效
+
+ctrl+/  批量注释 注释选中的多行
+
+ctrl+shift+L  选中文件中所有当前字符，可以一起修改删除
