@@ -47,7 +47,7 @@ x,y,z =count()
 x()
 y()
 z()
-# 期待结果不是1 4 9
+# 结果不是期待的1 4 9
 # 9
 # 9
 # 9
@@ -66,7 +66,21 @@ id(z)
 
 # 如果要1 4 9就要函数使用时的输入时固定的
 def  exe():
-    for i in range(10,20):
-        def f(i):
-            return i
+    def f(i):
+        def g():
+            return i*i
+        return g
+
+    x =[]
+    for y in range(1,5):
+        x.append(f(y))
+
+    return x
+
+f1,f2,f3 =exe()
+f1()
+f2()
+f3()
+
+
         
