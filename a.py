@@ -1,3 +1,13 @@
-import os
+def log(funct):
+    def wraper(*args,**kw):
+        print(' ------------ call %s ()-----------------' % funct.__name__)
+        return funct(*args,**kw)
+    return wraper
 
-print([d for d in os.listdir('.')])  # ‘.’表示当前py文件所在路径，'..'是父目录方法列出路径下所有目录和文件
+@ log                              #@在交互模式下不行要执行文件才可以
+def now():
+    print('2020-4-1- 17:11')
+
+now()
+print('func name is ',now.__name__)
+# func name is  wraper
