@@ -41,10 +41,16 @@ f()  #即在log()函数中返回的wrapper()函数
 #  ------------ call %s ()----------------- now
 # 2020-4-1- 17:11
 
-list(range(12))
+import functools
 
-print(11)
-
+def log1(text):
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kw):
+            print('%s %s():' % (text, func.__name__))
+            return func(*args, **kw)
+        return wrapper
+    return decorator
 
 
 
