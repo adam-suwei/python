@@ -40,7 +40,7 @@ s2.set_score(12)
 # 限制实例添加属性  __slots__只对当前类的实例有显示，子类不限制
 
 class Teacher(object):
-    __slots__ = ('name','age')
+    __slots__ = ('name','age')   #塞入
 
 Teacher.name ='12'
 Teacher.score = '80'
