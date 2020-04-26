@@ -10,8 +10,7 @@ class esdata(object):
         "query":{
             "bool":{
             "must":[
-                { "match": {"name":'a' } }
-              
+                { "match": {"name":'a' } }              
             ]
             }
         },
